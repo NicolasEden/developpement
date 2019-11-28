@@ -1,0 +1,131 @@
+* {
+  text-align: center;
+}
+#chapitre1,#chapitre2,#chapitre3,#chapitre4,#chapitre5 {
+  background-color: rgb(110, 110, 110);
+  border: 3px solid #1C6EA4;
+  border-radius: 15px;
+  text-align: center;
+}
+
+div h1 {
+  text-align: center;
+}
+img {
+  width: 200px;
+  height: 250px;
+  transition: 0.5s;
+  border: 5px solid #000000;
+  border-radius: 27px 24px 24px 24px;
+}
+
+h1 {
+color: rgb(16, 201, 166);
+font-family: cursive;
+text-decoration: underline;
+}
+a.menu {
+  transition: 0.5s;
+  text-decoration: none;
+  color: rgb(13, 157, 219);
+  font-size: 16pt;
+  font-weight: bold;
+  font-family: 'Pacifico', cursive;
+}
+img.start:hover {
+  width: 300px;
+  height: 350px;
+}
+html {
+  scroll-behavior: smooth;
+}
+p {
+  color: rgb(221, 221, 221);
+}
+body {
+background: url("../Ressources/background.jpg") no-repeat scroll 0 0;
+background-size: auto;
+}
+h2 {
+  color: #FFFFFF;
+  text-shadow: 4px 3px 0 #7A7A7A;
+  font-size: 50pt;
+}
+.rainbow-text {
+    background-image: repeating-linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red, violet);
+    text-align: center;
+    background-size: 800% 800%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 24px;
+
+}
+
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import url('https://fonts.googleapis.com/css?family=Anton');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+a.menu:hover {
+
+   /* Font options */
+  font-family: 'Pacifico', cursive;
+  text-shadow: 2px 2px 4px #000000;
+  font-size:30px;
+
+   /* Chrome, Safari, Opera */
+  -webkit-animation: rainbow 1s infinite;
+
+  /* Internet Explorer */
+  -ms-animation: rainbow 1s infinite;
+
+  /* Standar Syntax */
+  animation: rainbow 1s infinite;
+}
+body {
+    -webkit-animation: rainbow 1s infinite;
+    animation: rainbow 1s infinite;
+    -ms-animation: rainbow 1s infinite;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes rainbow{
+  0%{color: orange;}
+  10%{color: purple;}
+	20%{color: red;}
+  30%{color: CadetBlue;}
+	40%{color: yellow;}
+  50%{color: coral;}
+	60%{color: green;}
+  70%{color: cyan;}
+  80%{color: DeepPink;}
+  90%{color: DodgerBlue;}
+	100%{color: orange;}
+}
+
+/* Internet Explorer */
+@-ms-keyframes rainbow{
+   0%{color: orange;}
+  10%{color: purple;}
+	20%{color: red;}
+  30%{color: CadetBlue;}
+	40%{color: yellow;}
+  50%{color: coral;}
+	60%{color: green;}
+  70%{color: cyan;}
+  80%{color: DeepPink;}
+  90%{color: DodgerBlue;}
+	100%{color: orange;}
+}
+
+/* Standar Syntax */
+@keyframes rainbow{
+    0%{color: orange;}
+  10%{color: purple;}
+	20%{color: red;}
+  30%{color: CadetBlue;}
+	40%{color: yellow;}
+  50%{color: coral;}
+	60%{color: green;}
+  70%{color: cyan;}
+  80%{color: DeepPink;}
+  90%{color: DodgerBlue;}
+	100%{color: orange;}
+}    animation: rainbow 1s ease infinite;

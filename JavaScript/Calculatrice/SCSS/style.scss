@@ -1,0 +1,17 @@
+div.nombres {
+    display: flex;
+    flex-wrap: wrap;
+    width: 180px;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.nombres button {
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+}
+body {
+    display: flex;
+    justify-content: center;
+    
+}

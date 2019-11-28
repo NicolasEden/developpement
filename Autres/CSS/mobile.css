@@ -1,0 +1,215 @@
+@font-face {
+    font-family: "Brandon";
+    src: url("../Ressources/Polices/Brandon.otf");
+}
+@font-face {
+    font-family: "Brandon_Bold";
+    src: url("../Ressources/Polices/Brandon_bold.otf");
+}
+* {
+    font-family: "Brandon";
+    color: black;
+    scroll-behavior: smooth;
+}
+body {
+    background-image: url("../Ressources/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 0px;
+    top: 0px;
+}
+.background img#plane {
+    margin: 1.5% 0px 0px 8%;
+}
+.background img#logo {
+    margin: -10px 0px 0px 0.5%;
+}
+p#smalltext {
+    text-align: center;
+    margin-top: 10%;
+    color: white;
+    font-size: 24px;
+}
+h1#bigtext {
+    font-family: "Brandon_Bold";
+    color: white;
+    text-align: center;
+    font-size: 40px;
+}
+.menu ul{
+    font-family: "Brandon";
+    color: white;
+    font-size: 20px;
+    right: 20px;
+    top: 1.5%;
+    position: absolute;
+    display: inline-block;
+    list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+.menu a {
+    margin-left: 10px;
+    right: 10px;
+    color: white;
+}
+.menu a:link{
+    color: white;
+    text-decoration: none;
+}
+.menu a:hover {
+    border-bottom: 1px solid white;
+    color: white;
+}
+.menu li {
+    display: inline;
+    color: white;
+}
+.button {
+    text-align: center;
+    border: 5px solid white;
+    border-radius: 10px 10px 10px 10px;
+    color: white;
+    margin: 0% 0px 0px 30%;
+    height: 85px;
+    width: 260px;
+    transition: 0.5s;
+}
+.button p {
+    text-align: center;
+    color: white;
+    font-family: "Brandon_Bold";
+    font-size: 26px;
+    transition: 1.5s;
+}
+.button:hover {
+    background-color: white;
+}
+.button p:hover {
+    color: black;
+}
+.dev h1#web {
+    position: absolute;
+    top: 450px;
+    font-size: 60px;
+    left: 2%;
+}
+.dev span#dev {
+    font-family: "Brandon_Bold";
+}
+.dev p#txtw {
+    position: absolute;
+    font-size: 18px;
+}
+.dev span#txtw2 {
+    position: absolute;
+    margin-top: 50px;
+    left: 0%;
+}
+.txt1 {
+    position: absolute;
+    top: 600px;
+    text-align: center;
+    width: 98%;
+    height: 500px;
+}
+img#imgdev {
+    display: none;
+}
+.identity {
+    position: absolute;
+    background-color: #fafafa;
+    margin: 500px 0px 0px 0px;
+    left: 0px;
+    height: 420px;
+    width: 100%;
+}
+.identity h1#iden{
+    position: absolute;
+    top: 0px;
+    font-size: 60px;
+    left: 2%;
+}
+.identity span#branding {
+    font-size: 60px;
+    left: 28%;
+    font-family: "Brandon_Bold";
+    display: inline-block;
+}
+.txt {
+    font-weight: bold;
+    font-size: 20px;
+}
+.txt2 {
+    position: absolute;
+    top: 160px;
+    text-align: center;
+    width: 98%;
+    height: 500px;
+    left: 1%;
+}
+.txt2 img {
+    display: none;
+
+}
+
+.util {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    top: 1350px;
+    width: 90%;
+    height: 500px;
+    padding-left: 0%;
+
+}
+.util img {
+    width: 72px;
+    height: 71px;
+    float: left;
+    padding-top: 20px;
+}
+.util h1{
+    font-size: 22px;
+    padding-left: 24%;
+}
+.util p {
+    font-size: 16px;
+    padding-left: 24%;
+    margin-top: -10px;
+    line-height: 18px;
+}
+.contain-util {
+    padding-left: 5px;
+    width: 330px;
+}
+
+
+div.cclient {
+    top: 2500px;
+    background-color: #fafafa;
+}
+.cclient {
+    top: 2500px;
+    position: absolute;
+    width: 100%;
+}
+.cclient h1{
+    position: relative;
+    font-size: 60px;
+    top: 50px;
+    text-align: center;}
+.cclient p#csmalltxt {
+    position: relative;
+    font-size: 22px;
+    top: 0px;
+    text-align: center;
+}
+
+
+
+
+body {
+    background-color: white;
+}

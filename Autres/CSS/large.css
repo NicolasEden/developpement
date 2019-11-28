@@ -1,0 +1,207 @@
+@font-face {
+    font-family: "Brandon";
+    src: url("../Ressources/Polices/Brandon.otf");
+}
+    font-family: "Brandon_Bold";
+    src: url("../Ressources/Polices/Brandon_bold.otf");
+}
+
+* {
+    font-family: "Brandon";
+    color: black;
+    scroll-behavior: smooth; }
+body {
+    background-image: url("../Ressources/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: white; }
+.background img#plane {
+    margin: 1.5% 0px 0px 8%; }
+.background img#logo {
+    margin: -10px 0px 0px 0.5%; }
+p#smalltext {
+    text-align: center;
+    margin-top: 10%;
+    color: white;
+    font-size: 32px; }
+h1#bigtext {
+    font-family: "Brandon_Bold";
+    color: white;
+    text-align: center;
+    font-size: 66px; }
+.menu ul{
+    color: white;
+    font-size: 20px;
+    right: 100px;
+    top: 1.5%;
+    position: absolute; }
+a {
+  text-decoration: none; }
+.menu a {
+    margin-left: 50px;
+    color: white; }
+.menu a:hover {
+    border-bottom: 1px solid white; }
+.menu li {
+    display: inline; }
+.button {
+    border: 5px solid white;
+    border-radius: 10px 10px 10px 10px;
+    margin: 0% 0px 0px 40%;
+    height: 85px;
+    width: 260px;
+    transition: 0.5s; }
+.button p {
+    text-align: center;
+    color: white;
+    font-family: "Brandon_Bold";
+    font-size: 26px;
+    transition: 1.5s; }
+.button:hover {
+    background-color: white;
+    color: black; }
+.button p:hover {
+    color: black; }
+.dev h1#web {
+    position: absolute;
+    font-size: 60px;
+    top: 860px;
+    left: 20%; }
+span.txtbold {
+    font-size: 60px;
+    left: 28%;
+    font-family: "Brandon_Bold"; }
+p.txt {
+    position: absolute;
+    font-size: 18px; }
+span.txtspace {
+    position: absolute;
+    margin-top: 50px;
+    left: 0%; }
+.txt1 {
+    position: absolute;
+    top: 1000px;
+    left: 20%;
+    width: 565px;
+    height: 500px;
+}
+img#imgdev {
+    position: relative;
+    left: 50%;
+    width: 250px;
+    height:250px;
+    float: right; }
+.identity {
+    position: absolute;
+    background-color: #fafafa;
+    margin: 800px 0px 0px 0px;
+    height: 500px;
+    width: 100%; }
+.identity h1#iden{
+    margin-top: 100px;
+    font-size: 60px;
+    padding-left: 40%; }
+.txt {
+    font-weight: bold; }
+.txt2 {
+    position: absolute;
+    top: 210px;
+    left: 40%;
+    width: 565px;
+    height: 500px; }
+.txt2 img {
+    position: relative;
+    right: 60%;
+    width: 272px;
+    height: 197px;
+    float: left; }
+.util {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    top: 2000px;
+    width: 65%;
+    height: 500px;
+    padding-left: 18%; }
+.util img {
+    width: 72px;
+    height: 71px;
+    float: left;
+    padding-top: 20px; }
+.util h1{
+    font-size: 22px;
+    padding-left: 24%; }
+.util p {
+    font-size: 16px;
+    padding-left: 24%;
+    margin-top: -10px;
+    line-height: 16px; }
+.contain-util {
+    padding-left: 80px;
+    width: 400px; }
+div.cclient {
+    top: 2500px;
+    background-color: #fafafa;
+}
+.cclient {
+    top: 2500px;
+    position: absolute;
+    width: 100%;
+}
+.cclient h1{
+    position: relative;
+    font-size: 60px;
+    top: 50px;
+    text-align: center;}
+.cclient p#csmalltxt {
+    position: relative;
+    font-size: 22px;
+    top: 0px;
+    text-align: center;
+}
+.first-chatbox {
+    margin: 5% 0px 0px 20%;
+}
+.first-chatbox img#ppfc {
+}
+.first-chatbox img#boxfc {
+    position: absolute;
+    margin-top: 35px;
+}
+.first-chatbox p.ctxt {
+    width: 520px;
+    height: 500px;
+    font-size: 26px;
+    position: absolute;
+    margin-left: 300px;
+    margin-top: -190px;
+}
+.first-chatbox span.cfooter {
+    display: block;
+    font-size: 20px;
+    color: #7690c5;
+}
+.last-chatbox {
+    margin: 5% 0px 0px 20%;
+}
+.last-chatbox img#pplc {
+    margin-left: 53%;
+}
+.last-chatbox img#boxlc {
+    position: absolute;
+    margin-top: 35px;
+    left: 20%;
+}
+.last-chatbox p.ctxt {
+    width: 520px;
+    height: 500px;
+    font-size: 26px;
+    position: absolute;
+    margin-left: 50px;
+    margin-top: -190px;
+}
+.last-chatbox span.cfooter {
+    display: block;
+    font-size: 20px;
+    color: #7690c5;
+}

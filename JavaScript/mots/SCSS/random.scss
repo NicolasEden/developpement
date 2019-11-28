@@ -1,0 +1,36 @@
+div {
+    position: absolute;
+    color: white;
+}
+div.info{
+    margin-left: 50px;
+}
+div.input {
+    margin-top: 700px;
+}
+div.mots{
+    font-size: 20px;
+}
+
+input {
+    padding-right: 1390px;
+    margin-left: 20px;
+}
+
+body{
+    margin:0;
+    font:normal 75% Arial, Helvetica, sans-serif;
+}
+i{
+    font-size: 20px;
+}
+
+#particles-js{
+    margin-top: 0px;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #232741;
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-position: 50% 50%; }

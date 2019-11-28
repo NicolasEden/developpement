@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+  padding-top : 25px;
+  background-color : lightgray;
+}
+div#cgray {
+    display : none;
+}
+div#clgray {
+  width: 100px;
+  height: 1297px;
+  left: 0px;
+  top: 150px;
+  display: block;
+  position: absolute;
+  background-color: rgb(242, 242, 242);
+}
+div#cred {
+  width: 500px;
+  height: 200px;
+  position: absolute;
+  top: 150px;
+  background-color: rgb(193, 80, 77);
+  z-index: 9;
+  margin: -10px;
+}
+h1#meme {
+  top: 30px;
+  right: -110px;
+  position: absolute;
+  font-family: Lato;
+  font-size: 30px;
+}
+p#propo {
+  right: 120px;
+  position: absolute;
+  z-index: 10;
+  font-family: Lato;
+  color: white;
+  font-size: 20px
+}
+p#blabla1 {
+  right: -125px;
+  position: absolute;
+  z-index: 10;
+  font-family: Open Sans;
+  color: white;
+  font-size: 13px;
+  margin-top: 180px;
+  text-align: center;
+}
+h1#titre {
+    display: none;
+}
+img {
+  position: absolute;
+  margin-left: 0px;
+  margin-top: -20px;
+  z-index: 10;
+}
+div#red1 {
+    display : none;
+}
+div#red2 {
+    display : none;
+}
+p#mef {
+  z-index: 12;
+}
+p#contact {
+    display : none;
+}
+div#reseaux {
+    display : none;
+}
+a#sociaux {
+    display : none;
+}
+a#sociaux:hover {
+    display : none;
+}
+p#hobbies {
+    display : none;
+}
+ul.hobbie {
+    display : none;
+}
+div#competances p {
+    display : none;
+}
+div#red3 {
+    display : none;
+}
+
+div#competances ul{
+    display: none;
+}
+div#xp h1{
+  left: 20px;
+  top: 374px;
+  position: absolute;
+  z-index: 10;
+  font-size: 20px;
+  font-family: Lato;
+}
+
+/* WARNING: EXPERIENCES 1  */
+
+div#xp p#d1 {
+  left: 50px;
+  top: 437px;
+  position: absolute;
+  z-index: 10;
+  font-size: 16px;
+  font-family: Lato;
+  display: inline-block;
+}
+div#xp p#te1 {
+  left: 110px;
+  top: 440px;
+  position: absolute;
+  z-index: 10;
+  font-size: 14px;
+  font-family: Lato;
+  color: rgb(255, 138, 142);
+}
+div#xp p#te2 {
+  left: 110px;
+  top: 470px;
+  position: absolute;
+  z-index: 10;
+  font-size: 14px;
+  font-family: Lato;
+}
+div#xp p#pe1 {
+  left: 110px;
+  top: 470px;
+  position: absolute;
+  z-index: 10;
+  font-size: 11px;
+  font-family: Lato;
+}
+
+/* WARNING: EXPERIENCES 2  */
+
+div#xp p#d2 {
+  left: 50px;
+  top: 527px;
+  position: absolute;
+  z-index: 10;
+  font-size: 16px;
+  font-family: Lato;
+  display: inline-block;
+}
+div#xp p#te3 {
+  left: 110px;
+  top: 530px;
+  position: absolute;
+  z-index: 10;
+  font-size: 14px;
+  font-family: Lato;
+  color: rgb(255, 138, 142);
+}
+div#xp p#te4 {
+  left: 110px;
+  top: 550px;
+  position: absolute;
+  z-index: 10;
+  font-size: 14px;
+  font-family: Lato;
+}
+div#xp p#pe2 {
+  left: 110px;
+  top: 580px;
+  position: absolute;
+  z-index: 10;
+  font-size: 11px;
+  font-family: Lato;
+}
+
+/* WARNING: EXPERIENCES 3  */
+
+div#xp p#d3 {
+  left: 50px;
+  top: 647px;
+  position: absolute;
+  z-index: 10;
+  font-size: 16px;
+  font-family: Lato;
+  display: inline-block;
+}
+div#xp p#te5 {
+  left: 110px;
+  top: 650px;
+  position: absolute;
+  z-index: 10;
+  font-size: 14px;
+  font-family: Lato;
+  color: rgb(255, 138, 142);
+}
+div#xp p#te6 {
+  left: 110px;
+  top: 670px;
+  position: absolute;
+  z-index: 10;
+  font-size: 14px;
+  font-family: Lato;
+}
+div#xp p#pe3 {
+  left: 110px;
+  top: 700px;
+  position: absolute;
+  z-index: 10;
+  font-size: 11px;
+  font-family: Lato;
+}
+/* WARNING: EXPERIENCES 4  */
+
+div#xp p#d4 {
+  left: 50px;
+  top: 757px;
+  position: absolute;
+  z-index: 10;
+  font-size: 16px;
+  font-family: Lato;
+  display: inline-block;
+}
+div#xp p#te7 {
+  left: 110px;
+  top: 760px;
+  position: absolute;
+  z-index: 10;
+  font-size: 14px;
+  font-family: Lato;
+  color: rgb(255, 138, 142);
+}
+div#xp p#te8 {
+  left: 110px;
+  top: 780px;
+  position: absolute;
+  z-index: 10;
+  font-size: 14px;
+  font-family: Lato;
+}
+div#xp p#pe4 {
+  left: 110px;
+  top: 810px;
+  position: absolute;
+  z-index: 10;
+  font-size: 11px;
+  font-family: Lato;
+}
+/* WARNING: FIN D'EXPERIANCE */
+div#for h1{
+    left: 50px;
+    top: 920px;
+    position: absolute;
+    z-index: 10;
+    font-size: 20px;
+    font-family: Lato;
+}
+
+/* WARNING: FORMATION 1 */
+
+div#for p#d5 {
+  left: 50px;
+  top: 957px;
+  position: absolute;
+  z-index: 10;
+  font-size: 16px;
+  font-family: Lato;
+  display: inline-block;
+}
+div#for p#tf1 {
+  left: 110px;
+  top: 960px;
+  position: absolute;
+  z-index: 10;
+  font-size: 14px;
+  font-family: Lato;
+  color: rgb(255, 138, 142);
+}
+div#for p#tf2 {
+  left: 110px;
+  top: 980px;
+  position: absolute;
+  z-index: 10;
+  font-size: 14px;
+  font-family: Lato;
+}
+div#for p#pf1 {
+  left: 110px;
+  top: 1010px;
+  position: absolute;
+  z-index: 10;
+  font-size: 11px;
+  font-family: Lato;
+}
+
+/* WARNING: FORMATION 2 */
+
+div#for p#d6 {
+  left: 50px;
+  top: 1067px;
+  position: absolute;
+  z-index: 10;
+  font-size: 16px;
+  font-family: Lato;
+  display: inline-block;
+}
+div#for p#tf3 {
+  left: 110px;
+  top: 1070px;
+  position: absolute;
+  z-index: 10;
+  font-size: 14px;
+  font-family: Lato;
+  color: rgb(255, 138, 142);
+}
+div#for p#tf4 {
+  left: 110px;
+  top: 1090px;
+  position: absolute;
+  z-index: 10;
+  font-size: 14px;
+  font-family: Lato;
+}
+div#for p#pf2 {
+  left: 110px;
+  top: 1120px;
+  position: absolute;
+  z-index: 10;
+  font-size: 11px;
+  font-family: Lato;
+}
+/* WARNING: FORMATION 3 */
+
+div#for p#d7 {
+  left: 50px;
+  top: 1177px;
+  position: absolute;
+  z-index: 10;
+  font-size: 16px;
+  font-family: Lato;
+  display: inline-block;
+}
+div#for p#tf5 {
+  left: 110px;
+  top: 1180px;
+  position: absolute;
+  z-index: 10;
+  font-size: 14px;
+  font-family: Lato;
+  color: rgb(255, 138, 142);
+}
+div#for p#tf6 {
+  left: 110px;
+  top: 1200px;
+  position: absolute;
+  z-index: 10;
+  font-size: 14px;
+  font-family: Lato;
+}
+div#for p#pf3 {
+  left: 110px;
+  top: 1230px;
+  position: absolute;
+  z-index: 10;
+  font-size: 11px;
+  font-family: Lato;
+}
