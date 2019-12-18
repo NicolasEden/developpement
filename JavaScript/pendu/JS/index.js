@@ -1,5 +1,4 @@
-
-var mots = [
+const mots = [
   "A.",
   "ABS",
   "ABSe",
@@ -211672,3 +211671,125 @@ var mots = [
   "ôtèrent",
   "ôté"
 ];
+
+var stop = false;
+
+function sleep(milliseconds) {
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if ((new Date().getTime() - start) > milliseconds){
+      break;
+    }
+  }
+}
+
+var motstr = [];
+var tiret = 0;
+addElement = () => {
+        document.getElementById('input').focus();
+        document.getElementById('text').innerHTML = '';
+        mot = mots[Math.floor(Math.random()*mots.length)];
+        console.log(mot);
+        for (var i = 0; i < mot.length; i++) {
+            motstr.push(mot.substring(i, i+1));
+            motstr[i] = motstr[i].toLowerCase()
+            if (motstr[i] == "é" || motstr[i] == "è" || motstr[i] == "ê") motstr[i] = "e";
+            if (motstr[i] == "â") motstr[i] = "a";
+            tiret++
+        }
+        console.log(motstr);
+        globalDiv = document.createElement("div");
+        for (var i = 0; i < tiret; i++) {
+            newDiv = document.createElement("p");
+            newContent = document.createTextNode('_ ');
+            newDiv.appendChild(newContent);
+
+            newDiv.setAttribute("id", i);
+            newDiv.setAttribute("class", "pol");
+            document.getElementById('div1').append(newDiv);
+        }
+}
+
+var reponse = 0;
+var vie = 0;
+document.getElementById('input').addEventListener('keypress', function(event) {
+    if (event.keyCode == 13) {
+        if (document.getElementById('input').value != '' && document.getElementById('input').value != ' ') {
+            if (document.getElementById('input').value != "start") {
+                if (document.getElementById('input').value == "cheat") {
+                    document.getElementById('input').value = mot;
+                    return;
+                }
+                var random = motstr.indexOf(document.getElementById('input').value);
+                if (document.getElementById('input').value == mot) {
+                    fin('win');
+                }
+                if (random > -1) {
+                    for (var i = 0; i < motstr.length; i++) {
+                        if (motstr.indexOf(document.getElementById('input').value) > -1) {
+                            random = motstr.indexOf(document.getElementById('input').value);
+                            document.getElementById(random).innerHTML = motstr[random];
+                            motstr[random] = '';
+                            console.log(motstr);
+                            reponse++
+                        }
+                    }
+                    document.getElementById('input').value = '';
+                } else {
+                    vie++
+                    if (vie < 7) {
+                        document.getElementById('img').setAttribute("src", "./Ressources/"+vie+".png");
+                        document.getElementById('input').value = '';
+                    }
+                    else{
+                        fin('loss')
+                    }
+                }
+                if (reponse == mot.length) {
+                    fin('win')
+                }
+            } else {
+                window.location.reload(false);
+
+            }
+        } else {
+            document.getElementById('input').value = '';
+        }
+    }
+});
+
+
+fin = (win) => {
+    if (win == "win") {
+        for (var i = 0; i < mot.length; i++) {
+            var element = document.getElementById(i);
+            element.parentNode.removeChild(element);
+        }
+        newDiv = document.createElement("p");
+        newContent = document.createTextNode('Vous avez gagné, BRAVO ! ');
+        newDiv.appendChild(newContent);
+
+        newDiv.setAttribute("id", i);
+        newDiv.setAttribute("class", "pol");
+        document.getElementById('div1').append(newDiv);
+        document.getElementById('img').style.display = "none";
+        document.getElementById('input').style.display = "none";
+    } else if (win == "loss") {
+        for (var i = 0; i < mot.length; i++) {
+            var element = document.getElementById(i);
+            element.parentNode.removeChild(element);
+        }
+        newDiv = document.createElement("p");
+        newContent = document.createTextNode('Tu as perdu, faut réfléchir la prochaine fois !');
+        newDiv.appendChild(newContent);
+
+        newDiv.setAttribute("id", i);
+        newDiv.setAttribute("class", "pol");
+        document.getElementById('div1').append(newDiv);
+        document.getElementById('img').style.display = "none";
+        document.getElementById('input').style.display = "none";
+    }
+}
+random = () =>{
+    alert('NaN')
+}

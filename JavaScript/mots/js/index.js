@@ -211672,6 +211672,17 @@ var mots = [
   "ôté"
 ];
 
+var prenom;
+function start(){
+    action = true;
+    document.getElementById('score').innerHTML = "0 PTS";
+    document.getElementById('viea').setAttribute("class", "fas fa-heart")
+    document.getElementById('vieb').setAttribute("class", "fas fa-heart")
+    document.getElementById('viec').setAttribute("class", "fas fa-heart")
+    document.getElementById('input').focus();
+    addElement()
+}
+
 var pts = 0;
 var score = 0;
 var vie = 4;
@@ -211685,17 +211696,18 @@ function sleep(milliseconds) {
     }
   }
 }
-
+var long;
 document.getElementById('input').addEventListener('keypress', function(event) {
     if (event.keyCode == 13) {
         if (action === true) {
             var existe = popu.indexOf(document.getElementById('input').value);
             if (existe > -1) {
+                long = document.getElementById('input').value
                 var element = document.getElementById(existe);
                 console.log(element);
                 document.getElementById('input').value = '';
                 element.parentNode.removeChild(element);
-                score = score+100;
+                score = score+long.length;
                 document.getElementById('score').innerHTML = score+ " PTS";
 
             } else {
@@ -211743,9 +211755,22 @@ function addElement () {
           duration: 10000,
           step: testposition(newDiv.id)
         });
+        newDiv.animate([
+            { opacity: "0%" },
+            { opacity : "100%" }
+        ], {
+            duration: 500,
+        });
         setTimeout(addElement, 3000)
     }
 }
+var a = "Guillaume";
+function hello(){
+    console.log(this);
+};
+hello = hello.bind(a);
+hello();
+
 function remove(idset){
     console.log(ida);
 }
@@ -211758,7 +211783,6 @@ function testposition(idset) {
             if (idr > -1) {
                 var element = document.getElementById(idr);
                 element.parentNode.removeChild(element);
-                console.log('OK');
                 if (vie == 4){
                     document.getElementById('viea').setAttribute("class", "far fa-heart")
                 } else if (vie == 3){
@@ -211777,29 +211801,25 @@ function testposition(idset) {
     }
 }
 
-function clearall(){
+function load() {
+    var jso = $.getJSON( "./js/data.json", function( json ) {
+        $scope.usersData = { id: '1', login: 'test' };
+    });
+}
+
+clearall = () =>{
     for (var i = 0; i < ida; i++) {
         if (document.getElementById(i)) {
             var element = document.getElementById(i);
             document.getElementById('input').value = '';
             element.parentNode.removeChild(element);
+            document.getElementById('input').animate([
+                { opacity: "100%" },
+                { opacity: "0%" }
+            ], {
+                duration: 500,
+                iterations: 2
+            });
         }
     }
-}
-var prenom;
-function start(){
-    action = true;
-
-    document.getElementById('score').innerHTML = "0 PTS";
-    document.getElementById('viea').setAttribute("class", "fas fa-heart")
-    document.getElementById('vieb').setAttribute("class", "fas fa-heart")
-    document.getElementById('viec').setAttribute("class", "fas fa-heart")
-    document.getElementById('input').focus();
-    addElement()
-}
-
-const jsonFile = require('jsonfile');
-
-for (i = 0; i < 11; i++) {
-    jsonFile.writeFile('loop.json', "id :" + i + " square :" + i * i);
 }
