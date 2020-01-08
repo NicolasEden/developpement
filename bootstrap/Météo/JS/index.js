@@ -1,3 +1,11 @@
+var ville = null;
+$.ajax({
+    url: 'https://api.openweathermap.org/data/2.5/forecast?id=6454573&appid=fa956c3c094574e034c48dc970215933',
+    type: 'GET',
+    success: function(data){
+        ville = data
+    }
+});
 var today = null;
 
 function act(){
@@ -18,7 +26,7 @@ function act(){
 
     for (var i = 0; i < 8; i++) {
         var todayTime = Date.now().toString()
-        if (timeConverter(todayTime.substr(0, 10)) == timeConverter(ville.list[i].dt)) today = "Aujourd'hui le";
+        if (timeConverter(Date.now().toString().substr(0, 10)) == timeConverter(ville.list[i].dt)) today = "Aujourd'hui le";
         else if (timeConverterNext(todayTime.substr(0, 10)) == timeConverter(ville.list[i].dt)) today = "Demain le";
         else if (timeConverterNext2(todayTime.substr(0, 10)) == timeConverter(ville.list[i].dt)) today = "Après-demain le";
         else today = "";
@@ -35,19 +43,31 @@ function act(){
         newDiv.appendChild(newTodayWeather);
         newDiv.appendChild(newTodayCel);
         newDiv.appendChild(newTodayWeatherImage);
-        var degKelDay = parseInt(ville.list[i].feels_like.day)
+        var degKelDay = ville.list[i].main.temp
+        console.log(degKelDay);
         var degDay = (degKelDay - 273.15);
         var degDayString = degDay.toString();
         degDay = degDayString.substr(0, 4)
 
-        if (ville.list[i].weather[0].description == "light rain") newTodayWeather.innerHTML = 'Il y aura des nuages avec de la pluis'
-        if (ville.list[i].weather[0].description == "overcast clouds") newTodayWeather.innerHTML = 'Il y aura des gros nuages'
-        if (ville.list[i].weather[0].description == "broken clouds") newTodayWeather.innerHTML = 'Il y aura des gros nuages'
-        if (ville.list[i].weather[0].description == "scattered clouds") newTodayWeather.innerHTML = 'Il fera nuageux'
+        if (ville.list[i].weather[0].description == "light rain") {
+            newTodayWeather.innerHTML = 'Il y aura des nuages avec de la pluis'
+            newTodayWeatherImage.setAttribute("src", "./icons/rainy-3.svg")
+        }
+        if (ville.list[i].weather[0].description == "overcast clouds") {
+            newTodayWeather.innerHTML = 'Il y aura des gros nuages'
+            newTodayWeatherImage.setAttribute("src", "./icons/cloudy.svg")
+        }
+        if (ville.list[i].weather[0].description == "broken clouds") {
+            newTodayWeather.innerHTML = 'Il y aura des gros nuages'
+            newTodayWeatherImage.setAttribute("src", "./icons/cloudy.svg")
+        }
+        if (ville.list[i].weather[0].description == "scattered clouds") {
+            newTodayWeather.innerHTML = 'Il fera nuageux'
+            newTodayWeatherImage.setAttribute("src", "./icons/cloudy-day-3.svg")
+        }
         else newTodayWeather.innerHTM = "null"
         console.log(i)
         newTodayCel.innerHTML += ' '+degDay+" C°"
-        newTodayWeatherImage.setAttribute("src", "http://openweathermap.org/img/wn/"+ville.list[i].weather[0].icon+".png")
         newToday.innerHTML = today+' <strong>'+timeConverter(ville.list[i].dt)+'</strong>'
         newGenDiv.appendChild(newDiv);
     }
@@ -55,8 +75,11 @@ function act(){
 
 
 
-
-
+function test(){
+    for (var i = 0; i < ville.list.length; i++) {
+        console.log(timeConverter(ville.list[i].dt))
+    }
+}
 
 
 
