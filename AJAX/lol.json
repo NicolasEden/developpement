@@ -1,0 +1,12 @@
+lol = [{
+    "Personne" : {
+        "Prénom": "Nicolas",
+        "Nom": "Guillaume",
+        "Age": 15,
+        "Taille": "1m80",
+        "Caractéristique": "ERROR 404",
+        "Compétances": "Développeur WEB",
+        "CodePostale": "38110",
+        "Niveau De vie": "100"
+    }
+}]

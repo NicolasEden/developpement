@@ -1,4 +1,3 @@
-
 var mots = [
   "A.",
   "ABS",
@@ -211672,3 +211671,149 @@ var mots = [
   "ôtèrent",
   "ôté"
 ];
+
+var prenom;
+function start(){
+    action = true;
+    document.getElementById('score').innerHTML = "0 PTS";
+    document.getElementById('viea').setAttribute("class", "fas fa-heart")
+    document.getElementById('vieb').setAttribute("class", "fas fa-heart")
+    document.getElementById('viec').setAttribute("class", "fas fa-heart")
+    document.getElementById('input').focus();
+    addElement()
+}
+
+var pts = 0;
+var score = 0;
+var vie = 4;
+var action = true;
+
+function sleep(milliseconds) {
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if ((new Date().getTime() - start) > milliseconds){
+      break;
+    }
+  }
+}
+var long;
+document.getElementById('input').addEventListener('keypress', function(event) {
+    if (event.keyCode == 13) {
+        if (action === true) {
+            var existe = popu.indexOf(document.getElementById('input').value);
+            if (existe > -1) {
+                long = document.getElementById('input').value
+                var element = document.getElementById(existe);
+                console.log(element);
+                document.getElementById('input').value = '';
+                element.parentNode.removeChild(element);
+                score = score+long.length;
+                document.getElementById('score').innerHTML = score+ " PTS";
+
+            } else {
+                console.log('Mot non présent');
+                document.getElementById('input').value = '';
+                document.getElementById('input').style.backgroundColor = 'red';
+                setTimeout(white, 1000)
+            }
+        }
+    }
+});
+
+function white(){
+    document.getElementById('input').style.backgroundColor = 'white';
+}
+
+var randompos;
+var newDiv;
+var newContent;
+var currentDiv;
+var popu = [];
+var ida = 0;
+var idset = 0;
+function addElement () {
+    if (action === true) {
+        randompos = Math.floor((Math.random()*1300)+100);
+
+        newDiv = document.createElement("div");
+        newContent = document.createTextNode(mots[Math.floor(Math.random()*mots.length)]);
+        newDiv.appendChild(newContent);
+
+        currentDiv = document.getElementById('div1');
+        document.body.insertBefore(newDiv, currentDiv);
+        newDiv.style.position = "absolute";
+        newDiv.style.marginLeft = randompos+"px";
+        newDiv.style.margintop = "-150px";
+        popu.push(newDiv.innerHTML);
+        newDiv.setAttribute("id", ida);
+        newDiv.setAttribute("class", "mots");
+        ida++
+        newDiv.animate([
+          { transform: 'translateY(0px)' },
+          { transform: 'translateY(725px)' }
+        ], {
+          duration: 10000,
+          step: testposition(newDiv.id)
+        });
+        newDiv.animate([
+            { opacity: "0%" },
+            { opacity : "100%" }
+        ], {
+            duration: 500,
+        });
+        setTimeout(addElement, 3000)
+    }
+}
+var a = "Guillaume";
+function hello(){
+    console.log(this);
+};
+hello = hello.bind(a);
+hello();
+
+function remove(idset){
+    console.log(ida);
+}
+var idr = 1;
+function testposition(idset) {
+    if (action === true) {
+        idr = idset-3;
+        console.log(idr);
+        if (document.getElementById(idr)) {
+            if (idr > -1) {
+                var element = document.getElementById(idr);
+                element.parentNode.removeChild(element);
+                if (vie == 4){
+                    document.getElementById('viea').setAttribute("class", "far fa-heart")
+                } else if (vie == 3){
+                    document.getElementById('vieb').setAttribute("class", "far fa-heart")
+                } else if (vie == 2) {
+                    document.getElementById('viec').setAttribute("class", "far fa-heart")
+                } else if (vie == 1) {
+                    document.getElementById('vied').setAttribute("class", "far fa-heart")
+                    document.getElementById('score').innerHTML = "PERDU !</br> Vous avez eu : " + score;
+                    action = false;
+                    clearall()
+                }
+                vie--;
+            }
+        }
+    }
+}
+
+function load() {
+    var jso = $.getJSON( "./js/data.json", function( json ) {
+        $scope.usersData = { id: '1', login: 'test' };
+    });
+}
+
+clearall = () =>{
+    for (var i = 0; i < ida; i++) {
+        if (document.getElementById(i)) {
+            var element = document.getElementById(i);
+            document.getElementById('input').value = '';
+            element.parentNode.removeChild(element);
+            document.getElementById('input').style.display = "none";
+        }
+    }
+}

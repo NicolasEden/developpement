@@ -1,4 +1,4 @@
-var mots = [
+const mots = [
   "A.",
   "ABS",
   "ABSe",
@@ -211672,10 +211672,7 @@ var mots = [
   "ôté"
 ];
 
-var pts = 0;
-var score = 0;
-var vie = 4;
-var action = true;
+var stop = false;
 
 function sleep(milliseconds) {
   var start = new Date().getTime();
@@ -211686,120 +211683,113 @@ function sleep(milliseconds) {
   }
 }
 
+var motstr = [];
+var tiret = 0;
+addElement = () => {
+        document.getElementById('input').focus();
+        document.getElementById('text').innerHTML = '';
+        mot = mots[Math.floor(Math.random()*mots.length)];
+        console.log(mot);
+        for (var i = 0; i < mot.length; i++) {
+            motstr.push(mot.substring(i, i+1));
+            motstr[i] = motstr[i].toLowerCase()
+            if (motstr[i] == "é" || motstr[i] == "è" || motstr[i] == "ê") motstr[i] = "e";
+            if (motstr[i] == "â") motstr[i] = "a";
+            tiret++
+        }
+        console.log(motstr);
+        globalDiv = document.createElement("div");
+        for (var i = 0; i < tiret; i++) {
+            newDiv = document.createElement("p");
+            newContent = document.createTextNode('_ ');
+            newDiv.appendChild(newContent);
+
+            newDiv.setAttribute("id", i);
+            newDiv.setAttribute("class", "pol");
+            document.getElementById('div1').append(newDiv);
+        }
+}
+
+var reponse = 0;
+var vie = 0;
 document.getElementById('input').addEventListener('keypress', function(event) {
     if (event.keyCode == 13) {
-        if (action === true) {
-            var existe = popu.indexOf(document.getElementById('input').value);
-            if (existe > -1) {
-                var element = document.getElementById(existe);
-                console.log(element);
-                document.getElementById('input').value = '';
-                element.parentNode.removeChild(element);
-                score = score+100;
-                document.getElementById('score').innerHTML = score+ " PTS";
-
+        if (document.getElementById('input').value != '' && document.getElementById('input').value != ' ') {
+            if (document.getElementById('input').value != "start") {
+                if (document.getElementById('input').value == "cheat") {
+                    document.getElementById('input').value = mot;
+                    return;
+                }
+                var random = motstr.indexOf(document.getElementById('input').value);
+                if (document.getElementById('input').value == mot) {
+                    fin('win');
+                }
+                if (random > -1) {
+                    for (var i = 0; i < motstr.length; i++) {
+                        if (motstr.indexOf(document.getElementById('input').value) > -1) {
+                            random = motstr.indexOf(document.getElementById('input').value);
+                            document.getElementById(random).innerHTML = motstr[random];
+                            motstr[random] = '';
+                            console.log(motstr);
+                            reponse++
+                        }
+                    }
+                    document.getElementById('input').value = '';
+                } else {
+                    vie++
+                    if (vie < 7) {
+                        document.getElementById('img').setAttribute("src", "./Ressources/"+vie+".png");
+                        document.getElementById('input').value = '';
+                    }
+                    else{
+                        fin('loss')
+                    }
+                }
+                if (reponse == mot.length) {
+                    fin('win')
+                }
             } else {
-                console.log('Mot non présent');
-                document.getElementById('input').value = '';
-                document.getElementById('input').style.backgroundColor = 'red';
-                setTimeout(white, 1000)
+                window.location.reload(false);
+
             }
+        } else {
+            document.getElementById('input').value = '';
         }
     }
 });
 
-function white(){
-    document.getElementById('input').style.backgroundColor = 'white';
-}
 
-var randompos;
-var newDiv;
-var newContent;
-var currentDiv;
-var popu = [];
-var ida = 0;
-var idset = 0;
-function addElement () {
-    if (action === true) {
-        randompos = Math.floor((Math.random()*1300)+100);
-
-        newDiv = document.createElement("div");
-        newContent = document.createTextNode(mots[Math.floor(Math.random()*mots.length)]);
-        newDiv.appendChild(newContent);
-
-        currentDiv = document.getElementById('div1');
-        document.body.insertBefore(newDiv, currentDiv);
-        newDiv.style.position = "absolute";
-        newDiv.style.marginLeft = randompos+"px";
-        newDiv.style.margintop = "-150px";
-        popu.push(newDiv.innerHTML);
-        newDiv.setAttribute("id", ida);
-        newDiv.setAttribute("class", "mots");
-        ida++
-        newDiv.animate([
-          { transform: 'translateY(0px)' },
-          { transform: 'translateY(725px)' }
-        ], {
-          duration: 10000,
-          step: testposition(newDiv.id)
-        });
-        setTimeout(addElement, 3000)
-    }
-}
-function remove(idset){
-    console.log(ida);
-}
-var idr = 1;
-function testposition(idset) {
-    if (action === true) {
-        idr = idset-3;
-        console.log(idr);
-        if (document.getElementById(idr)) {
-            if (idr > -1) {
-                var element = document.getElementById(idr);
-                element.parentNode.removeChild(element);
-                console.log('OK');
-                if (vie == 4){
-                    document.getElementById('viea').setAttribute("class", "far fa-heart")
-                } else if (vie == 3){
-                    document.getElementById('vieb').setAttribute("class", "far fa-heart")
-                } else if (vie == 2) {
-                    document.getElementById('viec').setAttribute("class", "far fa-heart")
-                } else if (vie == 1) {
-                    document.getElementById('vied').setAttribute("class", "far fa-heart")
-                    document.getElementById('score').innerHTML = "PERDU !</br> Vous avez eu : " + score;
-                    action = false;
-                    clearall()
-                }
-                vie--;
-            }
-        }
-    }
-}
-
-function clearall(){
-    for (var i = 0; i < ida; i++) {
-        if (document.getElementById(i)) {
+fin = (win) => {
+    if (win == "win") {
+        for (var i = 0; i < mot.length; i++) {
             var element = document.getElementById(i);
-            document.getElementById('input').value = '';
             element.parentNode.removeChild(element);
         }
+        newDiv = document.createElement("p");
+        newContent = document.createTextNode('Vous avez gagné, BRAVO ! ');
+        newDiv.appendChild(newContent);
+
+        newDiv.setAttribute("id", i);
+        newDiv.setAttribute("class", "pol");
+        document.getElementById('div1').append(newDiv);
+        document.getElementById('img').style.display = "none";
+        document.getElementById('input').style.display = "none";
+    } else if (win == "loss") {
+        for (var i = 0; i < mot.length; i++) {
+            var element = document.getElementById(i);
+            element.parentNode.removeChild(element);
+        }
+        newDiv = document.createElement("p");
+        newContent = document.createTextNode('Tu as perdu, faut réfléchir la prochaine fois !');
+        newDiv.appendChild(newContent);
+
+        newDiv.setAttribute("id", i);
+        newDiv.setAttribute("class", "pol");
+        document.getElementById('div1').append(newDiv);
+        document.getElementById('img').style.display = "none";
+        document.getElementById('input').style.display = "none";
     }
 }
-var prenom;
-function start(){
-    action = true;
-
-    document.getElementById('score').innerHTML = "0 PTS";
-    document.getElementById('viea').setAttribute("class", "fas fa-heart")
-    document.getElementById('vieb').setAttribute("class", "fas fa-heart")
-    document.getElementById('viec').setAttribute("class", "fas fa-heart")
-    document.getElementById('input').focus();
-    addElement()
-}
-
-const jsonFile = require('jsonfile');
-
-for (i = 0; i < 11; i++) {
-    jsonFile.writeFile('loop.json', "id :" + i + " square :" + i * i);
+random = () =>{
+    alert('NaN')
 }
