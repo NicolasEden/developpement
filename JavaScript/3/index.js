@@ -16,10 +16,12 @@ document.getElementById('imput').addEventListener('keypress', function(event) {
 });
 
 function imc(){
-    var taille = parseInt(prompt("Votre taille ?"));
-    var poids = parseInt(prompt("Votre poids"));
+    var taille = prompt("Votre taille ?");
+    var poids = prompt("Votre poids");
     var taille2 = taille*taille;
+    console.log(taille2);
     var imc = poids/taille2;
+    console.log(imc);
    if (imc < 18.5) {
         alert('Vous êtes en "Insuffisance pondérale"')
     } else if (imc > 18.5 && imc < 25){
