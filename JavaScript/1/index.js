@@ -1,30 +1,54 @@
 var Florent = {
-    Prénom: "Florent",
-    Nom: "Martinez",
-    Äge: 16,
-    Taille: "1m78",
-    Caractéristique: "ERROR 404"
+    "Prénom": "Florent",
+    "Nom": "Martinez",
+    "Äge": 16,
+    "Taille": "1m78",
+    "Caractéristique": "ERROR 404",
+    "Compétances": "Développeur WEB",
+    "CodePostale": "69100",
+    "Niveau De vie": "100"
 }
 var Antoine = {
-    Prénom: "Antoine",
-    Nom: "Oriol",
-    Äge: 15,
-    Taille: "1m78",
-    Caractéristique: "ERROR 404"
+    "Prénom": "Antoine",
+    "Nom": "Oriol",
+    "Age": 15,
+    "Taille": "1m78",
+    "Caractéristique": "ERROR 404",
+    "Compétances": ["Développeur WEB", "Etudiant"],
+    "CodePostale": "69100",
+    "Niveau De vie": "100"
 }
 var Nicolas = {
-    Prénom: "Nicolas",
-    Nom: "Guillaume",
-    Äge: 15,
-    Taille: "1m80",
-    Caractéristique: "ERROR 404"
+    "Prénom": "Nicolas",
+    "Nom": "Guillaume",
+    "Age": 15,
+    "Taille": "1m80",
+    "Caractéristique": "ERROR 404",
+    "Compétances": "Développeur WEB",
+    "CodePostale": "38110",
+    "Niveau De vie": "100"
+}
+var Lyon = {
+    "Nom": "Lyon",
+    "Code Postale": "69100",
+    "Région": "Auverge Rhone-Alpes",
+    "Département": "Rhone",
+    "Pays": "France"
+}
+var stylo = {
+    "couleur": "Rouge",
+    "Niveau d'ancre": "90%"
 }
 function prenom() {
-    var reponse = prompt("Quel est ton prénom ?", "Et ton nom ?", "dsd")
+    var reponse = prompt("Quel est ton prénom ?")
     if (reponse == "Florent") {
         console.log(Florent)
     } else if (reponse == "Antoine") {
         console.log(Antoine);
+    }else if (reponse == "stylo") {
+        console.log(stylo);
+    }else if (reponse == "Lyon") {
+        console.log(Lyon);
     } else if  (reponse == "Nicolas")
         console.log(Nicolas);
     else {

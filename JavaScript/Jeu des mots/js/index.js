@@ -211813,13 +211813,7 @@ clearall = () =>{
             var element = document.getElementById(i);
             document.getElementById('input').value = '';
             element.parentNode.removeChild(element);
-            document.getElementById('input').animate([
-                { opacity: "100%" },
-                { opacity: "0%" }
-            ], {
-                duration: 500,
-                iterations: 2
-            });
+            document.getElementById('input').style.display = "none";
         }
     }
 }
