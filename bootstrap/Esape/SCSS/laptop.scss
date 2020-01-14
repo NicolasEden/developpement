@@ -1,0 +1,15 @@
+@font-face {
+    font-family: "Brandon";
+    src: url("../Ressources/Polices/Brandon.otf");
+}
+@font-face{
+    font-family: "Brandon_Bold";
+    src: url("../Ressources/Polices/Brandon_bold.otf");
+}
+
+li#title-escape{
+    font-family: "Brandon_Bold";
+}
+div.top{
+    background-image: url('../Ressources/background.jpg');
+}

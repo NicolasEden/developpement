@@ -10,17 +10,50 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
     </head>
-    <body onload='act("6454573")'>
-        <div class="container">
-            <div class="col-4" id="1">
-                <input class="col-4" classtype="text" name="" value="" onkeypress="changeCity(event)" id="input">
-            </div>
-            <div class="text-center">
-                <div class="row" id="2">
+    <body onload='act("Lyon")'>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-static-top">
+                <div class="container-fluid">
+                <a class="navbar-brand" href="#">Prévision</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Dropdown
+                        </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control bg-dark border-1 border-secondary" id="input" onkeypress="changeCity(event)" type="search" placeholder="Search" aria-label="Search">
+                </form>
             </div>
         </div>
+    </nav>
+        <div class="container" style='margin-top: 50px;'>
+            <div class="col-4" id="1" style="border: none">
+            </div>
+            <div class="row" id="2">
+
+            </div>
+        </div>
+        <script src="./JS/index.js" charset="utf-8"></script>
     </body>
-    <script src="./JS/index.js" charset="utf-8"></script>
 </html>

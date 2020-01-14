@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Météo Lyon</title>
+        <link rel="stylesheet" href="./CSS/laptop.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <form action="http://92.222.69.104/exercice/bonjour3/" method="get" target="_blank">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Prénom</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="prenom" aria-describedby="emailHelp" placeholder="Entrez votre prénom">
+                    <small id="emailHelp" class="form-text text-muted">Nous ne partagerons JAMAIS votre prénom à qui que ce soit.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Nom</label>
+                    <input type="text" class="form-control" id="exampleInputEmail2" name="nom" aria-describedby="emailHelp2" placeholder="Entrez votre nom">
+                    <small id="emailHelp2" class="form-text text-muted">Nous ne partagerons JAMAIS votre nom à qui que ce soit.</small>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="button" onclick="random(document.getElementById('exampleInputEmail2').value, document.getElementById('exampleInputEmail1').value)" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <div id="resultat">
+
+        </div>
+
+        <script src="./JS/index.js" charset="utf-8"></script>
+    </body>
+</html>
