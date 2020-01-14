@@ -1,3 +1,6 @@
+$black-gray: #222;
+$gray: #fafafa;
+
 @font-face {
     font-family: "Brandon";
     src: url("../Ressources/Polices/Brandon.otf");
@@ -6,32 +9,18 @@
     font-family: "Brandon_Bold";
     src: url("../Ressources/Polices/Brandon_bold.otf");
 }
-
+*{
+    font-family: "Brandon";
+}
 li#title-escape{
     font-family: "Brandon_Bold";
 }
 nav#nav{
     padding-top: 20px;
 }
-ul#menu{
-}
 ul li {
     margin-left: 20px;
-    font-family: "Brandon";
     font-size: 18px;
-
-}
-@font-face {
-    font-family: "Brandon";
-    src: url("../Ressources/Polices/Brandon.otf");
-}
-@font-face{
-    font-family: "Brandon_Bold";
-    src: url("../Ressources/Polices/Brandon_bold.otf");
-}
-
-li#title-escape{
-    font-family: "Brandon_Bold";
 }
 div.top{
     background-image: url('../Ressources/background.jpg');
@@ -40,7 +29,6 @@ div.top{
 p#text-top-center-1 {
     margin-top: 150px;
     font-size: 32px;
-    font-family: "Brandon";
     color: white;
 }
 p#text-top-center-2 {
@@ -54,9 +42,7 @@ p#text-top-center-2 {
 button#learn {
     height: 60px;
     width: 240px;
-    font-family: "Brandon";
     font-size: 25px;
-    color: #fff;
     background-color: transparent;
     margin-top: 50px;
     margin-bottom: 150px;
@@ -65,20 +51,18 @@ button#learn {
 button#learn:hover {
     height: 60px;
     width: 240px;
-    font-family: "Brandon";
     font-size: 25px;
     color: black;
     background-color: white;
 }
 h1#title-web-dev{
     padding-top: 100px;
-    font-family: "Brandon";
     font-size: 60px;
-    color: #222222;
+    color: $black-gray;
 }
 strong#strong-title-web-dev{
     font-family: "Brandon_Bold";
-    color: #222222;
+    color: $black-gray;
 }
 .web-dev{
     background-color: white;
@@ -98,14 +82,14 @@ h1#title-id{
     padding-top: 100px;
     font-family: "Brandon";
     font-size: 60px;
-    color: #222222;
+    color: $black-gray;
 }
 strong#strong-title-id{
     font-family: "Brandon_Bold";
-    color: #222222;
+    color: $black-gray;
 }
 .id{
-    background-color: #fafafa;
+    background-color: $gray;
 }
 .text-title-id{
     margin-top: 20px;
@@ -116,4 +100,15 @@ img#img-title-id {
     margin-bottom: 100px;
     height: 250px;
     width: 350px;
+}
+div.cartes {
+    padding-top: 100px;
+    background-color: white;
+    padding-bottom: 100px;
+}
+h1.carte-h1 {
+    font-size: 27px;
+}
+div.client {
+    background-color: $gray;
 }
