@@ -1,5 +1,8 @@
 $black-gray: #222;
+$gray-white: #777777;
 $gray: #fafafa;
+$invisible: transparent;
+$black: #111111;
 
 @font-face {
     font-family: "Brandon";
@@ -11,6 +14,9 @@ $gray: #fafafa;
 }
 *{
     font-family: "Brandon";
+    strong {
+        font-family: "Brandon_Bold"
+    }
 }
 li#title-escape{
     font-family: "Brandon_Bold";
@@ -23,37 +29,39 @@ ul li {
     font-size: 18px;
 }
 div.top{
+    padding-top: 20px;
     background-image: url('../Ressources/background.jpg');
     background-size: cover;
-}
-p#text-top-center-1 {
-    margin-top: 150px;
-    font-size: 32px;
-    color: white;
-}
-p#text-top-center-2 {
-    text-transform: uppercase;
-    margin-top: 20px;
-    font-size: 66px;
-    font-weight: bold;
-    font-family: "Brandon_Bold";
-    color: white;
-}
-button#learn {
-    height: 60px;
-    width: 240px;
-    font-size: 25px;
-    background-color: transparent;
-    margin-top: 50px;
-    margin-bottom: 150px;
-    transition: 0.3s;
-}
-button#learn:hover {
-    height: 60px;
-    width: 240px;
-    font-size: 25px;
-    color: black;
-    background-color: white;
+    p#text-top-center-1 {
+        margin-top: 150px;
+        font-size: 32px;
+        color: white;
+    }
+    p#text-top-center-2 {
+        text-transform: uppercase;
+        margin-top: 20px;
+        font-size: 66px;
+        font-weight: bold;
+        font-family: "Brandon_Bold";
+        color: white;
+    }
+    button#learn {
+        height: 60px;
+        width: 240px;
+        font-size: 25px;
+        background-color: $invisible;
+        margin-top: 50px;
+        margin-bottom: 150px;
+        color: white;
+        transition: 0.3s;
+    }
+    button#learn:hover {
+        height: 60px;
+        width: 240px;
+        font-size: 25px;
+        color: black;
+        background-color: white;
+    }
 }
 h1#title-web-dev{
     padding-top: 100px;
@@ -111,4 +119,117 @@ h1.carte-h1 {
 }
 div.client {
     background-color: $gray;
+}
+div.client {
+    p#sous-text-client {
+        font-size: 22px;
+        padding-bottom: 20px;
+    }
+    h1#text-client {
+        padding-top: 50px;
+    }
+    div#citation-1-div {
+        margin-top: 30px;
+        background-image: url('../Ressources/Client/Speak_Box.png');
+        background-size: cover;
+        padding-top: 1px;
+        padding-bottom: 20px;
+        padding-left: 100px;
+        width: 700px;
+        p#citation-1 {
+            margin-top: 25px;
+            width: 520px;
+            font-size: 26px;
+        }
+        p#citation-2{
+            font-size: 20px;
+        }
+    }
+    div#citation-2-div {
+        margin-top: 30px;
+        background-image: url('../Ressources/Client/Speak_Box2.png');
+        background-size: cover;
+        padding-top: 1px;
+        padding-bottom: 20px;
+        padding-left: 100px;
+        width: 700px;
+        p#citation-3 {
+            margin-top: 25px;
+            width: 520px;
+            font-size: 26px;
+        }
+        p#citation-4{
+            font-size: 20px;
+        }
+    }
+    div#div-gene-cita {
+        margin-top: 50px;
+        padding-bottom: 100px;
+    }
+}
+div.sponsor {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: $gray;
+}
+div.team{
+    padding-top: 50px;
+    background-color: $black;
+    p#title-1 {
+        color: white;
+        font-size: 60px;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+    }
+    p#title-1 {
+        color: white;
+        font-size: 60px;
+    }
+    p#title-1-text {
+        color: $gray-white;
+        font-size: 22px;
+        padding-bottom: 50px;
+    }
+    .col-4 {
+        p {
+            font-size: 18px;
+            color: white;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        div.Icons {
+            display: flex;
+            justify-content: center;
+            img {
+                padding-left: 6px;
+            }
+        }
+    }
+    p#text-team {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        font-size: 20px;
+        color: #ebebeb;
+        width: 650px;
+    }
+    div#text-team-div {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 50px;
+    }
+}
+div.contact {
+    background-color: #7690c5;
+    h1 {
+        font-size: 60px;
+        padding-top: 100px;
+        color: white;
+    }
+    p#contact-text {
+        font-size: 18px;
+        color: white;
+        width: 450px;
+    }
 }
